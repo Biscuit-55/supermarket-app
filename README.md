@@ -5,7 +5,7 @@
 
 ---
 
-# 📌 Technologies Used
+# Technologies Used
 
 - Node.js
 - Express.js
