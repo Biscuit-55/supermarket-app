@@ -1,9 +1,11 @@
-# supermarket-app
+# Supermarket Inventory Management System
+
+ระบบจัดการคลังสินค้าซูเปอร์มาร์เก็ต (CRUD System)  
+พัฒนาด้วย Node.js, Express.js และ MySQL (MAMP)
 
 ---
 
-โปรเจกต์นี้เป็นระบบจัดการคลังสินค้าซูเปอร์มาร์เก็ต (CRUD System)
-พัฒนาด้วย:
+# 📌 Technologies Used
 
 - Node.js
 - Express.js
@@ -12,8 +14,10 @@
 - Bootstrap 5
 - Multer
 - MVC Architecture
-- 
-# โครงสร้างโปรเจกต์
+
+---
+
+# 📁 Project Structure
 
 ```plaintext
 supermarket-app/
@@ -31,7 +35,11 @@ supermarket-app/
 └── supermarket_db.sql
 ```
 
-# วิธีติดตั้งโปรเจกต์
+---
+
+# 🇹🇭 ภาษาไทย
+
+# 🚀 วิธีติดตั้งโปรเจกต์
 
 ## 1. ดาวน์โหลดโปรเจกต์
 
@@ -51,13 +59,17 @@ npm install
 
 ## 3. เปิด MAMP
 
-เปิดโปรแกรม MAMP แล้ว Start Servers
+เปิดโปรแกรม MAMP แล้วกด:
+
+```plaintext
+Start Servers
+```
 
 ---
 
 ## 4. สร้างฐานข้อมูล
 
-เข้า:
+เข้าเว็บไซต์:
 
 ```plaintext
 http://localhost/phpMyAdmin
@@ -71,7 +83,7 @@ supermarket_db.sql
 
 ---
 
-## 5. ตั้งค่า db.js
+## 5. ตั้งค่าไฟล์ db.js
 
 ตัวอย่าง:
 
@@ -91,7 +103,30 @@ module.exports = connection;
 
 ---
 
-## 6. รันโปรเจกต์
+## 6. สร้างโฟลเดอร์ uploads
+
+ภายในโฟลเดอร์:
+
+```plaintext
+public/
+```
+
+ให้สร้างโฟลเดอร์ชื่อ:
+
+```plaintext
+uploads
+```
+
+โครงสร้างจะเป็นแบบนี้:
+
+```plaintext
+public/
+└── uploads/
+```
+
+---
+
+## 7. รันโปรเจกต์
 
 ```bash
 node app.js
@@ -99,7 +134,7 @@ node app.js
 
 ---
 
-## 7. เปิดเว็บไซต์
+## 8. เปิดเว็บไซต์
 
 ```plaintext
 http://localhost:3000
@@ -107,40 +142,7 @@ http://localhost:3000
 
 ---
 
-# English
-
-## Project Description
-
-This project is a Supermarket Inventory Management System developed using:
-
-- Node.js
-- Express.js
-- MySQL (MAMP)
-- EJS
-- Bootstrap 5
-- Multer
-- MVC Architecture
----
-
-# Project Structure
-
-```plaintext
-supermarket-app/
-│
-├── controllers/
-├── models/
-├── routes/
-├── views/
-├── public/
-│   └── uploads/
-├── app.js
-├── db.js
-├── package.json
-├── README.md
-└── supermarket_db.sql
-```
-
----
+# 🇺🇸 English
 
 # Installation Guide
 
@@ -162,7 +164,11 @@ npm install
 
 ## 3. Start MAMP
 
-Open MAMP application and Start Servers.
+Open MAMP application and click:
+
+```plaintext
+Start Servers
+```
 
 ---
 
@@ -202,7 +208,30 @@ module.exports = connection;
 
 ---
 
-## 6. Run Project
+## 6. Create uploads Folder
+
+Inside:
+
+```plaintext
+public/
+```
+
+Create a folder named:
+
+```plaintext
+uploads
+```
+
+Project structure:
+
+```plaintext
+public/
+└── uploads/
+```
+
+---
+
+## 7. Run Project
 
 ```bash
 node app.js
@@ -210,7 +239,7 @@ node app.js
 
 ---
 
-## 7. Open Website
+## 8. Open Website
 
 ```plaintext
 http://localhost:3000
@@ -218,6 +247,6 @@ http://localhost:3000
 
 ---
 
-# Author
+# 👨‍💻 Author
 
 Developed for Web Development Course
