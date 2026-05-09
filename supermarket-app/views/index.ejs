@@ -1,0 +1,176 @@
+<%- include('partials/header') %>
+
+<% if(success === 'added'){ %>
+
+<div class="alert alert-success alert-dismissible fade show">
+
+    Product added successfully!
+
+    <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+    ></button>
+
+</div>
+
+<% } %>
+
+<% if(success === 'updated'){ %>
+
+<div class="alert alert-success alert-dismissible fade show">
+
+    Product updated successfully!
+
+    <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+    ></button>
+
+</div>
+
+<% } %>
+
+<% if(success === 'deleted'){ %>
+
+<div class="alert alert-danger alert-dismissible fade show">
+
+    Product deleted successfully!
+
+    <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+    ></button>
+
+</div>
+
+<% } %>
+
+<h2 class="mb-4">Product Dashboard</h2>
+
+<div class="row">
+
+<% products.forEach(product => { %>
+
+<div class="col-md-4 mb-4">
+
+    <div class="card h-100">
+
+        <% if(product.image){ %>
+
+        <img
+            src="/uploads/<%= product.image %>"
+            class="card-img-top"
+            style="height:250px; object-fit:cover;"
+        >
+
+        <% } %>
+
+        <div class="card-body">
+
+            <h5><%= product.name %></h5>
+
+            <p>
+                Category:
+                <%= product.category %>
+            </p>
+
+            <p>
+                Price:
+                <%= product.price %> บาท
+            </p>
+
+            <% if(product.stock == 0){ %>
+
+                <p class="text-danger fw-bold">
+                    Out of Stock
+                </p>
+
+            <% } else { %>
+
+                <p>
+                    Stock:
+                    <%= product.stock %>
+                </p>
+
+            <% } %>
+
+            <a
+                href="/edit/<%= product.id %>"
+                class="btn btn-warning"
+            >
+                Edit
+            </a>
+
+            <button
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#deleteModal<%= product.id %>"
+            >
+                Delete
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div
+    class="modal fade"
+    id="deleteModal<%= product.id %>"
+>
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5>
+                    Confirm Delete
+                </h5>
+
+            </div>
+
+            <div class="modal-body">
+
+                คุณแน่ใจหรือไม่ว่าต้องการลบรายการนี้?
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                >
+                    Cancel
+                </button>
+
+                <form
+                    action="/delete/<%= product.id %>?_method=DELETE"
+                    method="POST"
+                >
+
+                    <button class="btn btn-danger">
+                        Delete
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<% }) %>
+
+</div>
+
+<%- include('partials/footer') %>
