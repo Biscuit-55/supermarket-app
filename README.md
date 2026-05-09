@@ -247,6 +247,3 @@ http://localhost:3000
 
 ---
 
-# 👨‍💻 Author
-
-Developed for Web Development Course
